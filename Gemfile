@@ -1,8 +1,37 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt-ruby'
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+end
+
+gem 'rails_12factor', group: :production
+
+gem "omniauth"
+
+gem 'bootstrap_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
+gem "omniauth-twitter"
+
+gem 'dotenv-rails', :groups => [:development, :test]
+
 gem 'rails', '4.1.5'
+
+gem 'httparty'
+
+gem 'bootstrap-sass', '3.2.0.2'
+
+gem "resque"
+
+gem 'devise'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -37,4 +66,3 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

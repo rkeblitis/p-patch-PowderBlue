@@ -1,2 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+
+}
+body {
+  background-image: url(image_path("dirt.jpg"));
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

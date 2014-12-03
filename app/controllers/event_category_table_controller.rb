@@ -1,0 +1,2 @@
+class EventCategoryTableController < ApplicationController
+end

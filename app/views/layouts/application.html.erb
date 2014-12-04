@@ -15,7 +15,12 @@
 <body>
 
 <h2 class="yellow-text">sign-up</h2>
-<%= render "users/signupform" %>
+<form id="signup" action="/users/:id" method="POST">
+  <input type="text" name="username" placeholder="email"><br>
+  <input type="text" name="password_digest" placeholder="password"><br>
+  <input type="submit" value="Sign up">
+</form>
+
 
 <%= yield %>
 

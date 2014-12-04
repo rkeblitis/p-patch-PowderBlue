@@ -2,6 +2,10 @@
 @import "bootstrap";
 
 html {
+    // background: url(image_path("dirt.jpg")) no-repeat center fixed;
+    background: url(image_path("dirt.jpg")) no-repeat center center fixed;
+    background-size: 100% 100%;
+    min-height: 100%;  
 }
 
 body {

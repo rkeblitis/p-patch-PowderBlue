@@ -2,10 +2,25 @@
 @import "bootstrap";
 
 html {
-
 }
+
 body {
   background-image: url(image_path("dirt.jpg"));
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.yellow-text {
+  margin-top: 0;
+  margin-left: 1em;
+  color: #f8f006;
+  text-shadow: 2px 2px #574f4f;
+}
+
+#signup {
+  background-color: #ffffff;
+  width: 20%;
+  padding: 1em;
+  margin: 0;
 }

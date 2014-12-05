@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root "home#index"
 
-  get   "/users",         to: "users#index",    as: :users
-  get   "/signup",        to: "users#new",      as: :signup
+  get   "/users",         to: "users#index",      as: :users
+  get   "/signup",        to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
-
+  get   "/signin",        to: "sessions#new",     as: :signin
+  post  "/signin",        to: "sessions#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

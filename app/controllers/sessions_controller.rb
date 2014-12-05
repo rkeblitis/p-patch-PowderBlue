@@ -13,16 +13,16 @@ class SessionsController < ApplicationController
 
   def create_oauth
     auth_hash = request.env['omniauth.auth']
-    if auth_hash[:uid]
-        Oauth.find_by(uid: auth_hash[:uid])
-        @current_user
+    if Oauth.find_by(uid: auth_hash["uid"])
+      @oauth = Oauth.find_by(uid: auth_hash["uid"])
+      @current_user = session[@oauth.user_id]
+      redirect_to root_path
     else
-      User.create(us)
-      # create new user with username and user_id
-      # create new oauth with uid and provier token user_id[User.id]
-      @current user
+      @user = User.create(username: auth_hash["info"]["nickname"])
+      Oauth.create(user_id: @user.id, uid: auth_hash["uid"], provider: auth_hash["provider"], token: auth_hash["credentials"]["token"])
+      @current_user = session[@user.id]
+      redirect_to root_path
     end
-
   end
 
   def destroy

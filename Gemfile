@@ -32,7 +32,6 @@ gem 'bootstrap-sass', '3.2.0.2'
 
 gem "resque"
 
-gem 'devise'
 
 # Use postgresql as the database for Active Record
 gem 'pg'

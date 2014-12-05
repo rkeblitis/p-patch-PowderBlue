@@ -11,8 +11,9 @@ class SessionsController < ApplicationController
     end
   end
 
-  def create_omniauth
-    
+  def create_oauth
+    auth_hash = request.env['omniauth.auth']
+    raise
   end
 
   def destroy

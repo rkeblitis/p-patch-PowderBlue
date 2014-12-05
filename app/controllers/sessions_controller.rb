@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
     if @current_user.authenticate(params[:password])
       redirect_to root_path, notice: "You're signed in, #{@current_user.username}. Woohoo!"
     end
+  end
 
+  def create_omniauth
+    
   end
 
   def destroy

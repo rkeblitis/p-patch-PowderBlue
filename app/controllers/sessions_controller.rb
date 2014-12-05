@@ -13,7 +13,16 @@ class SessionsController < ApplicationController
 
   def create_oauth
     auth_hash = request.env['omniauth.auth']
-    raise
+    if auth_hash[:uid]
+        Oauth.find_by(uid: auth_hash[:uid])
+        @current_user
+    else
+      User.create(us)
+      # create new user with username and user_id
+      # create new oauth with uid and provier token user_id[User.id]
+      @current user
+    end
+
   end
 
   def destroy

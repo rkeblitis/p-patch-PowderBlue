@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
     if User.find(params[:id])
       @current_user = session[:user_id]
     else
-      @current_user 
+      @current_user
     end
   end
+
+
 end

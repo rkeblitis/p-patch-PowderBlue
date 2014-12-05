@@ -15,15 +15,19 @@
 <body>
 
 <h2 class="yellow-text">sign-up</h2>
+
 <form id="signup" action="/users/:id" method="POST">
   <input type="text" name="username" placeholder="email"><br>
   <input type="text" name="password_digest" placeholder="password"><br>
-  <input type="submit" value="Sign up">
+  <input type="submit" value="Sign up" class="btn btn-default">
 </form>
 
-<%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
+<div class="whiteout">
 
-<%= yield %>
+  <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
+  <%= link_to "Home", root_path %>
+  <%= yield %>
+</div>
 
 </body>
 </html>

@@ -12,7 +12,8 @@ html {
 body {
   background-color: transparent;
 }
-// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 .yellow-text {
   font-family: "helvetica";
   margin-top: 0;
@@ -27,4 +28,13 @@ body {
   padding: 1em;
   margin: 0;
   border-radius: 1.2em;
+}
+
+.whiteout {
+  margin-top: 1em;
+  background-color: #ffffff;
+}
+
+.form {
+  padding: 1em;
 }

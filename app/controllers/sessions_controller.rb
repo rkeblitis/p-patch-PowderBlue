@@ -5,10 +5,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(username: params[:username])
-    if @user.authenticate(params[:password])
-      redirect_to root_path, notice: "You're signed in, #{@user.username}. Woohoo!"
+    @current_user = User.find_by(username: params[:username])
+    if @current_user.authenticate(params[:password])
+      redirect_to root_path, notice: "You're signed in, #{@current_user.username}. Woohoo!"
     end
+
   end
 
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path, notice: "Signed Out"
+  end
 end

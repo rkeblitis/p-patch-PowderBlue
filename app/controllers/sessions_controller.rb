@@ -18,6 +18,7 @@ class SessionsController < ApplicationController
       @current_user = session[@oauth.user_id]
       redirect_to root_path
     else
+      User.create(username: auth_hash["info"]["nickname"])
       @user = User.create(username: auth_hash["info"]["nickname"])
       Oauth.create(user_id: @user.id, uid: auth_hash["uid"], provider: auth_hash["provider"], token: auth_hash["credentials"]["token"])
       @current_user = session[@user.id]

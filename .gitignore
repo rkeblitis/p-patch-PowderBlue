@@ -14,8 +14,4 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-<<<<<<< HEAD
-=======
-
->>>>>>> 7e23918ac6e528a71ae87c928e4d58035aa2e27a
 .env

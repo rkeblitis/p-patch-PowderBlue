@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "auth/:provider/callback",    to: "sessions#create_oauth"
-  
+
   get   "/users",         to: "users#index",      as: :users
-  get   "/signup",        to: "users#new",        as: :signup
+  get   "/",        to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
   get   "/signin",        to: "sessions#new",     as: :signin
   post  "/signin",        to: "sessions#create"

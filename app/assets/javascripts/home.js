@@ -1,6 +1,10 @@
 $(function() {
-  $("#signup").hide();
+  $(".signup-signin").hide();
   $(".yellow-text").click(function() {
-    $("#signup").slideToggle("slow");
+    $(".signup-signin").slideToggle("slow");
+  });
+  $(".signup-signin-2").hide();
+  $(".yellow-text-2").click(function() {
+    $(".signup-signin-2").slideToggle("slow");
   });
 });

@@ -14,18 +14,49 @@
 </head>
 <body>
 
-<h2 class="yellow-text">sign-up</h2>
+<% if session[:user_id] %>
 
-<form id="signup" action="/users/:id" method="POST">
-  <input type="text" name="username" placeholder="email"><br>
-  <input type="text" name="password_digest" placeholder="password"><br>
-  <input type="submit" value="Sign up" class="btn btn-default">
-</form>
+  <div class="whiteout">
+    <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
+    <%= link_to "Home", root_path %>
+  </div>
+
+<% else %>
+
+  <div class="col-xs-2">
+
+  <h2 class="yellow-text">Sign-Up</h2>
+
+  <%= form_for(@current_user, html: { class: "form signup-signin"}) do |f| %>
+    <%= f.label "username:" %><br>
+    <%= f.text_field :username %><br>
+    <%= f.label "email address" %><br>
+    <%= f.text_field :email %><br>
+    <%= f.label "password:" %><br>
+    <%= f.password_field :password %><br>
+    <%= f.label "password confirmation:" %><br>
+    <%= f.password_field :password_confirmation %><br>
+    <%= f.submit "Create account", :class => "btn btn-default" %>
+  <% end %>
+
+  </div>
+
+  <div class="col-xs-2">
+
+  <h2 class="yellow-text-2">Sign-In</h2>
+
+  <%= form_tag "/signin", class: "form signup-signin-2" do %>
+    <%= label_tag "username (your email):" %><br>
+    <%= text_field_tag :username %><br>
+    <%= label_tag "password:" %><br>
+    <%= password_field_tag :password %><br>
+    <%= submit_tag "Signin", :class => "btn btn-default" %>
+  <% end %>
+
+  </div>
+<% end %>
 
 <div class="whiteout">
-
-  <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
-  <%= link_to "Home", root_path %>
   <%= yield %>
 </div>
 

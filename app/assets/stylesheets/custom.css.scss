@@ -14,7 +14,7 @@ body {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
-.yellow-text {
+.yellow-text, .yellow-text-2 {
   font-family: "helvetica";
   margin-top: 0;
   margin-left: .5em;
@@ -22,7 +22,7 @@ body {
   text-shadow: 2px 2px #574f4f;
 }
 
-#signup {
+.signup-signin, .signup-signin-2 {
   background-color: #ffffff;
   width: 20%;
   padding: 1em;
@@ -37,4 +37,6 @@ body {
 
 .form {
   padding: 1em;
+  width: 100%;
+  margin: 1em;
 }

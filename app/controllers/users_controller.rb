@@ -18,6 +18,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def admin
+    current_user
+    if @current_user.admin = true
+      @users = User.all
+    else
+      redirect_to root_path
+    end
+  end
+
   private
 
   def user_params

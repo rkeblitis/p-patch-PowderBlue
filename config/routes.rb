@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get   "/users",         to: "users#index",      as: :users
   get   "/",              to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
-  
+  get   "/admin",         to: "users#admin",      as: :admin
+
   get   "/signin",        to: "sessions#new",     as: :signin
   post  "/signin",        to: "sessions#create"
   get   "/my-account",    to: "sessions#show",    as: :my_account

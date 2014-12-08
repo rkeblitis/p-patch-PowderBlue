@@ -14,11 +14,11 @@
 </head>
 <body>
 
-<% if session[:user_id] %>
+<% if logged_in? %>
 
   <div class="whiteout">
+    <%= link_to "Home", root_path %> / 
     <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
-    <%= link_to "Home", root_path %>
   </div>
 
 <% else %>
@@ -53,7 +53,9 @@
     <%= submit_tag "Signin", :class => "btn btn-default" %>
   <% end %>
 
+  <%= link_to "Sign in through Twitter", "auth/twitter" %>
   </div>
+
 <% end %>
 
 <div class="whiteout">

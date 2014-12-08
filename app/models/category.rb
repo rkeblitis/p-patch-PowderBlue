@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-  has_many :events, :though => :event_category_table
-  has_many :event_category_tables
+  has_many :events, :through => :category_events
+  has_many :category_events
 end

@@ -4,11 +4,16 @@ Rails.application.routes.draw do
   get "auth/:provider/callback",    to: "sessions#create_oauth"
 
   get   "/users",         to: "users#index",      as: :users
-  get   "/",        to: "users#new",        as: :signup
+  get   "/",              to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
+  
   get   "/signin",        to: "sessions#new",     as: :signin
   post  "/signin",        to: "sessions#create"
+  get   "/my-account",    to: "sessions#show",    as: :my_account
   delete "/signout",      to: "sessions#destroy", as: :signout
+
+  get "/categories",      to: "categories#index",  as: :categories
+  get "/categories/new",  to: "categories#new",    as: :new_category
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

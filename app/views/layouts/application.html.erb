@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<% if session[:user_id] %>
+<% if logged_in? %>
 
   <div class="whiteout">
     <%= link_to "Home", root_path %> /

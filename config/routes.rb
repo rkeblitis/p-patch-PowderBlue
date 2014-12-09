@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'calendar/show'
+
   root "home#index"
 
   get "auth/:provider/callback",    to: "sessions#create_oauth"
@@ -21,7 +23,9 @@ Rails.application.routes.draw do
   post "/events",           to: "events#create"
   get "/events/:id/edit",   to: "events#edit",       as: :edit_event
   patch "/events/:id",      to: "events#update"
-  
+
+  get "/calendars/show",    to: "calendars#show",    as: :calendar
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

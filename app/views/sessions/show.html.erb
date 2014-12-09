@@ -9,4 +9,11 @@
 
   <%= link_to "Add Event Category", new_category_path %><br>
   <%= link_to "Add New Event", new_event_path %>
+
+  <h2>Your Event Listings</h2>
+  <ul class="list">
+    <% @events.each do |event| %>
+      <li><%= event.name %></li>
+    <% end %>
+  </ul>
 </div>

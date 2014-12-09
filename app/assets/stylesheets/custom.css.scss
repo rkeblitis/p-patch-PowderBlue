@@ -14,6 +14,7 @@ body {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
 .yellow-text, .yellow-text-2, .yellow-link {
   font-family: "helvetica";
   margin-top: 0;
@@ -47,6 +48,7 @@ body {
   padding: 1em;
   margin: 1em;
 }
+
 .form2 input, .form2 textarea {
   width: 25em;
 }
@@ -58,6 +60,8 @@ body {
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*MY ACCOUNT PAGE~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 #my-account {
+  margin: 1em;
+  padding: .5em;
 }
 
 .list {

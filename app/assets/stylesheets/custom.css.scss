@@ -41,6 +41,20 @@ body {
   margin: 1em;
 }
 
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*FORMS~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+.form2 {
+  padding: 1em;
+  margin: 1em;
+}
+.form2 input, .form2 textarea {
+  width: 25em;
+}
+
+.form2 textarea {
+  height: 10em;
+}
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*MY ACCOUNT PAGE~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 #my-account {

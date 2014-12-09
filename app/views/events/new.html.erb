@@ -1,0 +1,7 @@
+<%= form_for(@event, html: { class: "form"}) do |f| %>
+  <%= f.label "Event name:" %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label "date and time:" %><br>
+  <%= f.datetime_select "datetime" %><br><br>
+  <%= f.submit "Create event", :class => "btn btn-default" %>
+<% end %>

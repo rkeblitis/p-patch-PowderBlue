@@ -13,6 +13,13 @@ body {
   background-color: transparent;
 }
 
+.whiteout {
+  margin-top: 1em;
+  background-color: #ffffff;
+  padding-bottom: 1em;
+  width: 100%;
+}
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .yellow-text, .yellow-text-2, .yellow-link {
@@ -29,11 +36,6 @@ body {
   padding: 1em;
   margin: 0;
   border-radius: 1.2em;
-}
-
-.whiteout {
-  margin-top: 1em;
-  background-color: #ffffff;
 }
 
 .form {
@@ -70,4 +72,44 @@ body {
 
 .list {
   list-style-type: none;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*CALENDAR~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.wrap-calendar {
+  width: 70%;
+}
+
+#calendar {
+  padding: 2em;
+  margin: 1em;
+  width: 100%;
+}
+
+#calendar th {
+  padding: 1em;
+}
+
+#calendar tr {
+  margin: 1em;
+  padding: 1em;
+}
+
+#calendar td {
+  padding: 1em;
+}
+
+#calendar .day {
+  font-size: 1.2em;
+}
+
+#calendar .date-number {
+  text-align: center;
+}
+
+.calendar-month {
+  padding-top: .5em;
+  text-align: center;
+  font-size: 3em;
+  font-family: serif;
+  color: #939cb4;
 }

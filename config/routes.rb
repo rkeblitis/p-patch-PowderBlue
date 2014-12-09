@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get   "/users",         to: "users#index",      as: :users
   get   "/",              to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
-  
+
   get   "/signin",        to: "sessions#new",     as: :signin
   post  "/signin",        to: "sessions#create"
   get   "/my-account",    to: "sessions#show",    as: :my_account
@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   get "/categories",      to: "categories#index",  as: :categories
   get "/categories/new",  to: "categories#new",    as: :new_category
+  post "/categories",     to: "categories#create"
+
+  get "/events",          to: "events#index",      as: :events
+  get "/events/new",      to: "events#new",        as: :new_event
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

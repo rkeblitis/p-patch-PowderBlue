@@ -17,6 +17,21 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @categories = Category.all
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @categories = Category.all
+    @event = Event.find(params[:id])
+    if @event.update(event_params)
+      redirect_to my_account_path, notice: "Event updated!"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def event_params

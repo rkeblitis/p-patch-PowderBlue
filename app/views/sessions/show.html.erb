@@ -13,7 +13,7 @@
   <h2>Your Event Listings</h2>
   <ul class="list">
     <% @events.each do |event| %>
-      <li><%= event.name %></li>
+      <li><%= event.name %> on <%= event.datetime %> (<%= link_to "Edit", edit_event_path(event) %>)</li>
     <% end %>
   </ul>
 </div>

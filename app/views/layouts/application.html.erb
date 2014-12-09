@@ -29,15 +29,15 @@
     <h2 class="yellow-text">Sign-Up</h2>
 
     <%= form_for(@current_user, html: { class: "form signup-signin"}) do |f| %>
-    <%= f.label "username:" %><br>
-    <%= f.text_field :username %><br>
-    <%= f.label "email address" %><br>
-    <%= f.text_field :email %><br>
-    <%= f.label "password:" %><br>
-    <%= f.password_field :password %><br>
-    <%= f.label "password confirmation:" %><br>
-    <%= f.password_field :password_confirmation %><br>
-    <%= f.submit "Create account", :class => "btn btn-default" %>
+      <%= f.label "username:" %><br>
+      <%= f.text_field :username %><br>
+      <%= f.label "email address" %><br>
+      <%= f.text_field :email %><br>
+      <%= f.label "password:" %><br>
+      <%= f.password_field :password %><br>
+      <%= f.label "password confirmation:" %><br>
+      <%= f.password_field :password_confirmation %><br><br>
+      <%= f.submit "Create account", :class => "btn btn-default" %>
     <% end %>
 
   </div>
@@ -47,15 +47,14 @@
     <h2 class="yellow-text-2">Sign-In</h2>
 
     <%= form_tag "/signin", class: "form signup-signin-2" do %>
-    <%= label_tag "username (your email):" %><br>
-    <%= text_field_tag :username %><br>
-    <%= label_tag "password:" %><br>
-    <%= password_field_tag :password %><br>
-    <%= submit_tag "Signin", :class => "btn btn-default" %>
+      <%= label_tag "username:" %><br>
+      <%= text_field_tag :username %><br>
+      <%= label_tag "password:" %><br>
+      <%= password_field_tag :password %><br><br>
+      <%= submit_tag "Sign In", :class => "btn btn-default" %>
     <% end %>
   </div>
-  
-  <%= link_to "Sign in through Twitter", "auth/twitter", class: "yellow-link col-xs-2" %>
+  <a href="/auth/twitter" class="yellow-link col-xs-2"><%= image_tag "sign-in-with-twitter-gray.png" %></a>
 
 <% end %>
 

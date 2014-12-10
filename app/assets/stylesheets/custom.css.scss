@@ -16,7 +16,7 @@ body {
 .whiteout {
   margin-top: 7em;
   background-color: #ffffff;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   width: 100%;
 }
 
@@ -55,7 +55,17 @@ body {
   text-align: center;
 }
 
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*sign-in bar~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
+.top-bar {
+  background-color: #747474;
+  padding: 1em;
+}
+
+.top-bar a:link, .top-bar a:visited, .top-bar a:hover, .top-bar a:active {
+  color: #becaba;
+  font-size: 1.2em;
+}
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*FORMS~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .form2 {

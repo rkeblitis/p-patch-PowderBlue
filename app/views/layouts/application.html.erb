@@ -16,7 +16,7 @@
 
 <% if logged_in? %>
 
-  <div class="whiteout">
+  <div class="top-bar">
     <%= link_to "Home", root_path %> /
     <%= link_to "My account", my_account_path(@current_user) %> /
     <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>

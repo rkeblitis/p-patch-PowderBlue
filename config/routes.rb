@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get   "/",              to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
   get   "/admin",         to: "users#admin",      as: :admin
+  patch "/admin",         to: "user#make_admin",  as: :make_admin
 
   get   "/signin",        to: "sessions#new",     as: :signin
   post  "/signin",        to: "sessions#create"

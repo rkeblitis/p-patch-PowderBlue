@@ -27,6 +27,10 @@ class UsersController < ApplicationController
       end
   end
 
+  def make_admin
+
+  end
+
   private
 
   def user_params

@@ -20,11 +20,11 @@ class UsersController < ApplicationController
 
   def admin
     current_user
-    if @current_user.admin = true
-      @users = User.all
-    else
+      if @current_user.admin == true
+        @users = User.all
+      else
       redirect_to root_path
-    end
+      end
   end
 
   private

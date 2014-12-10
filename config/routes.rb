@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   get "auth/:provider/callback",    to: "sessions#create_oauth"
 
-<<<<<<< HEAD
   get   "/users",           to: "users#index",      as: :users
   get   "/",                to: "users#new",        as: :signup
   post  "/users",           to: "users#create"

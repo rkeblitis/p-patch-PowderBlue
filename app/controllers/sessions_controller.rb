@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @current_user != nil
       if @current_user.authenticate(params[:password])
         session[:user_id] = @current_user.id
-        redirect_to my_account_path(@current_user), notice: "You're signed in, #{@current_user.username}. Woohoo!"
+        redirect_to my_account_path, notice: "You're signed in, #{@current_user.username}. Woohoo!"
       end
     else
       redirect_to root_path, notice: "Couldn't sign you in! Are you sure you've signed up?"
@@ -22,17 +22,17 @@ class SessionsController < ApplicationController
       @oauth = Oauth.find_by(uid: auth_hash["uid"])
       session[:user_id] = @oauth.user_id
       @user = User.find(@oauth.user_id)
-      redirect_to my_account_path(@user), notice: "You're signed in, #{@user.username} Yay!"
+      redirect_to my_account_path, notice: "You're signed in, #{@user.username} Yay!"
     else
       @user = User.create(username: auth_hash["info"]["nickname"], password_digest: "nil", email: "nil")
       @oauth = Oauth.create(user_id: @user.id, uid: auth_hash["uid"], provider: auth_hash["provider"], token: auth_hash["credentials"]["token"])
       session[:user_id] = @oauth.user_id
-      redirect_to my_account_path(@user), notice: "You're signed in, #{@user.username} Yay!"
+      redirect_to my_account_path, notice: "You're signed in, #{@user.username} Yay!"
     end
   end
 
   def show
-
+    @events = current_user.events
   end
 
   def destroy

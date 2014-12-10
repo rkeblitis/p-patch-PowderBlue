@@ -1,6 +1,14 @@
 <%= notice %>
 
+
 <div class="wrap-calendar">
+
+  <% if logged_in? %>
+    <div class="center">
+      <%= link_to "Add Event", new_event_path, class: "btn btn-info" %>
+    </div>
+  <% end %>
+  
   <h2 class="calendar-month"><%= @display_month_year %></h2>
   <table id="calendar">
     <tr>
@@ -32,6 +40,7 @@
             <%= link_to event.name, event_path(event) %>
           <% end %></td>
       <% end %>
+
     </tr>
   </table>
 </div>

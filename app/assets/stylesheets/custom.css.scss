@@ -20,6 +20,9 @@ body {
   width: 100%;
 }
 
+.center {
+  text-align: center;
+}
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .yellow-text, .yellow-text-2 {
@@ -99,6 +102,7 @@ body {
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*CALENDAR~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 .wrap-calendar {
   width: 70%;
+  padding-top: 2em;
 }
 
 #calendar {
@@ -129,7 +133,7 @@ body {
 }
 
 .calendar-month {
-  padding-top: 2em;
+  // padding-top: 2em;
   text-align: center;
   font-size: 3em;
   font-family: "Palatino";

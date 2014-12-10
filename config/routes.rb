@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get "auth/:provider/callback",    to: "sessions#create_oauth"
 
+<<<<<<< HEAD
   get   "/users",           to: "users#index",      as: :users
   get   "/",                to: "users#new",        as: :signup
   post  "/users",           to: "users#create"
@@ -26,6 +27,18 @@ Rails.application.routes.draw do
   patch "/events/:id",      to: "events#update"
 
   get "/calendars/show",    to: "calendars#show",    as: :calendar
+
+  get   "/users",         to: "users#index",      as: :users
+  get   "/",              to: "users#new",        as: :signup
+  post  "/users",         to: "users#create"
+  get   "/admin",         to: "users#admin",      as: :admin
+  patch "/admin",         to: "user#make_admin",  as: :make_admin
+
+  get   "/signin",        to: "sessions#new",     as: :signin
+  post  "/signin",        to: "sessions#create"
+  get   "/my-account",    to: "sessions#show",    as: :my_account
+  delete "/signout",      to: "sessions#destroy", as: :signout
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -29,7 +29,8 @@ Rails.application.routes.draw do
   get "/events/:id/edit",   to: "events#edit",       as: :edit_event
   patch "/events/:id",      to: "events#update"
 
-  get "/calendars/show",    to: "calendars#show",    as: :calendar
+  get "/calendars",         to: "calendars#index",  as: :calendars
+  get "/calendars/:id",    to: "calendars#show",    as: :calendar
 
 
   # The priority is based upon order of creation: first created -> highest priority.

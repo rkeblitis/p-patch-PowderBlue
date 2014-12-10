@@ -6,8 +6,15 @@
   <% if logged_in? %>
     <div class="center">
       <%= link_to "Add Event", new_event_path, class: "btn btn-info" %>
+      <%= link_to "Show All Calendar Events (STILL WORKING ON THIS)", calendars_path, class: "btn btn-info" %>
+    </div>
+
+  <% else %>
+    <div class="center">
+      <%= link_to "Show All Calendar Events (STILL WORKING ON THIS)", calendars_path, class: "btn btn-info" %>
     </div>
   <% end %>
+
 
   <h2 class="calendar-month"><%= @display_month_year %></h2>
   <table id="calendar">

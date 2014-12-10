@@ -62,11 +62,11 @@ ActiveRecord::Schema.define(version: 20141210192317) do
   end
 
   create_table "posts", force: true do |t|
-    t.integer  "admin_id"
     t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "tools", force: true do |t|

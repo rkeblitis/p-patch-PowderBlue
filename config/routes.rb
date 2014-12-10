@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   get   "/users",           to: "users#index",      as: :users
   get   "/",                to: "users#new",        as: :signup
   post  "/users",           to: "users#create"
+
   get   "/admin",         to: "users#admin",      as: :admin
-  patch "/admin",         to: "user#make_admin",  as: :make_admin
+  post  "/admin",         to: "posts#create",     as: :posts
+  patch "/admin/:id",     to: "users#make_admin",  as: :make_admin
 
   get   "/signin",          to: "sessions#new",     as: :signin
   post  "/signin",          to: "sessions#create"

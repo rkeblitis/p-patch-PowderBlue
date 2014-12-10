@@ -14,12 +14,15 @@
 
   <%@users.each do |user| %>
     <tr>
-      <% if user.admin == nil %>
+      <% if user != @current_user  %>
         <td><%= user.username %></td>
         <td><%= user.email %></td>
+        <% if user.admin == nil %>
         <td><%= button_to "Make Admin", make_admin_path(user.id), method: :patch, class:"btn btn-default" %></td>
-
-    <%end %>
+        <% else %>
+          <td><%= user.admin %>
+          <%end %>
+      <%end %>
   </tr>
 
   <%end %>

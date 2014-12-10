@@ -28,7 +28,10 @@ class UsersController < ApplicationController
   end
 
   def make_admin
-
+    if user = User.find(params[:id])
+      user.update(admin: true)
+      redirect_to admin_path
+    end
   end
 
   private

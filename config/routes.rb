@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get   "/users",         to: "users#index",      as: :users
   get   "/",              to: "users#new",        as: :signup
   post  "/users",         to: "users#create"
+
   get   "/admin",         to: "users#admin",      as: :admin
-  patch "/admin",         to: "user#make_admin",  as: :make_admin
+  post  "/admin",         to: "posts#create",     as: :posts
+  patch "/admin/:id",     to: "users#make_admin",  as: :make_admin
 
   get   "/signin",        to: "sessions#new",     as: :signin
   post  "/signin",        to: "sessions#create"
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
 
   get "/categories",      to: "categories#index",  as: :categories
   get "/categories/new",  to: "categories#new",    as: :new_category
+
+  #post"/news",            to: "posts#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

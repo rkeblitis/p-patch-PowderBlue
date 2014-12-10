@@ -14,12 +14,12 @@
     </tr>
 
     <tr>
-
+      <!-- WORK ON THIS -->
       <% find_events_for_month(@current_year, @current_month) %>
-      <% @events.each do |event|  %>
-        <%= event.name %>
-      <% end %>
-      
+
+
+
+
       <% (@beginning_of_month..@end_of_month).each do |d| %>
         <% if d == @beginning_of_month %>
           <% d.wday.times do %> <td class="offset"></td>

@@ -1,1 +1,19 @@
-<%= notice %>
+<div id="my-account">
+  <h2>Your Account</h2>
+  <%= notice %>
+
+  <ul class="list">
+    <li>Name: <%= current_user.username %></li>
+    <li>Email: <%= current_user.email %></li>
+  </ul>
+
+  <%= link_to "Add Event Category", new_category_path %><br>
+  <%= link_to "Add New Event", new_event_path %>
+
+  <h2>Your Event Listings</h2>
+  <ul class="list">
+    <% @events.each do |event| %>
+      <li><%= event.name %> on <%= event.date %> (<%= link_to "Edit", edit_event_path(event) %>)</li>
+    <% end %>
+  </ul>
+</div>

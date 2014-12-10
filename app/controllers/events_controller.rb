@@ -17,6 +17,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   def edit
     @categories = Category.all
     @event = Event.find(params[:id])
@@ -35,6 +39,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    (params.require(:event).permit(:name, :datetime, :description, :user_id, :category_ids => []))
+    (params.require(:event).permit(:name, :date, :description, :user_id, :category_ids => []))
   end
 end

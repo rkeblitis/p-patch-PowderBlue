@@ -14,11 +14,8 @@
     </tr>
 
     <tr>
-      <!-- WORK ON THIS -->
-      <% find_events_for_month(@current_year, @current_month) %>
 
-
-
+      <% find_events_for_current_month %>
 
       <% (@beginning_of_month..@end_of_month).each do |d| %>
         <% if d == @beginning_of_month %>
@@ -29,8 +26,11 @@
       <% if d.wday == 0 %>
         </tr><tr>
       <% end %>
-
-        <td class="date-number"><%= d.day %></td>
+        <td class="date-number"><%= d.day %><br>
+          <% get_events_of_the_day(get_exact_date(d.day)) %>
+          <% @events_of_the_day.each do |event| %>
+            <%= link_to event.name, event_path(event) %>
+          <% end %></td>
       <% end %>
     </tr>
   </table>

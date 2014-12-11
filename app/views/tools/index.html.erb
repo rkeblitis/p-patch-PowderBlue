@@ -1,7 +1,21 @@
 <h2 class="tools">Tool Library</h2>
 
-<ul class="tools-list">
+<ul class="tools-list list">
   <% @tools.each do |tool| %>
-  <li><%= tool.name %></li>
+    <li><%= tool.name %>
+    <% if tool.user_id.nil? %>
+      <%= form_for tool do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.submit "Checkout", class: "btn btn-default" %>
+      <% end %>
+    <% elsif tool.user_id == current_user.id %>
+      <%= form_for tool do |f| %>
+        <%= f.hidden_field :user_id, value: nil %>
+        <%= f.submit "Return", class: "btn btn-default" %>
+      <% end %>
+    <% else %>
+      <small>CHECKED OUT BY <%= find_user_by_tool(tool.user_id).username %></small>
+    <% end %>
+    </li>
   <% end %>
 </ul>

@@ -35,20 +35,27 @@ body {
   font-family: "helvetica";
   font-size: 2em;
   background-color: #000000;
-  padding: .2em;
-  text-align: center;
+  padding-top: 2em;
+  padding-left: 1em;
+  // text-align: center;
 }
 
 .nav-for-everybody a {
   color: #d0d0d0;
 }
+
+small {
+  color: #df8581;
+  font-size: .7em;
+}
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .yellow-text, .yellow-text-2 {
   font-family: "helvetica";
   margin-top: 0;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #e5fefc;
   text-shadow: 2px 2px #574f4f;
 }
@@ -60,6 +67,7 @@ body {
   margin: 0;
   border-radius: 1em;
   border-color: #bec0ba;
+  font-size: .9em;
 }
 
 .signup-signin input, .signup-signin-2 input {
@@ -165,4 +173,8 @@ body {
 
 .tools-list {
   text-align: center;
+}
+
+.tools-list li {
+  font-size: 1.5em;
 }

@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get "/tools",             to: "tools#index",      as: :tools
   post "/tools",            to: "tools#create"
+  get "/tools/:id",         to: "tools#show",       as: :tool
+  patch "/tools/:id",       to: "tools#update",     as: :edit_tool
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

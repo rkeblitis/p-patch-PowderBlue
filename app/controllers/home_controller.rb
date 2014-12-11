@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     @beginning_of_month = Date.civil(@current_year, @current_month, 1)
     @end_of_month = Date.civil(@current_year, @current_month, -1)
 
-
+    @tools = Tool.all
   end
 
 end

@@ -39,9 +39,11 @@
 <%end %>
 
 <h3>All Tools</h3>
+<% @tools.each do |tool| %>
+  <%= tool.name %>
+<% end %>
 
 <h3>Add Tool</h3>
-
 <%= form_for @tool do |f| %>
   <%= f.label "name" %>
   <%= f.text_field :name %>

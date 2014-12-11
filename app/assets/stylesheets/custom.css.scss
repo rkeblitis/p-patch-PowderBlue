@@ -110,6 +110,7 @@ body {
 .wrap-calendar {
   width: 70%;
   padding-top: 2em;
+  margin-left: 13%;
 }
 
 #calendar {
@@ -139,11 +140,17 @@ body {
   text-align: center;
 }
 
-.calendar-month {
-  // padding-top: 2em;
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SHARED~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.calendar-month, .tools {
   text-align: center;
   font-size: 3em;
   font-family: "Palatino";
   color: #7fdcd5;
   text-shadow: 1px 1px #000000;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*TOOLS~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+
+.tools-list {
+  text-align: center;
 }

@@ -1,0 +1,7 @@
+<h3>News Articles</h3>
+
+<% @posts.each do |post| %>
+  <h4><%= post.title %></h4>
+  <p><%= post.content %></p><br>
+  <%= button_to "Add a Comment", comments_path(post.id), method: :post, class:"btn btn-default" %>
+<% end %>

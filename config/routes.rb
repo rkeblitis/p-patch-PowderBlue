@@ -9,14 +9,21 @@ Rails.application.routes.draw do
   get   "/",                to: "users#new",        as: :signup
   post  "/users",           to: "users#create"
 
-  get   "/admin",         to: "users#admin",      as: :admin
-  post  "/admin",         to: "posts#create",     as: :posts
-  patch "/admin/:id",     to: "users#make_admin",  as: :make_admin
+
+
+  get   "/admin",           to: "users#admin",      as: :admin
+  post  "/admin",           to: "posts#create",     as: :posts
+  patch "/admin/:id",       to: "users#make_admin", as: :make_admin
+
+  get  "/posts",             to: "posts#index",       as: :all_posts
 
   get   "/signin",          to: "sessions#new",     as: :signin
   post  "/signin",          to: "sessions#create"
   get   "/my-account",      to: "sessions#show",    as: :my_account
   delete "/signout",        to: "sessions#destroy", as: :signout
+
+  get "/comments",          to: "comments#index",   as: :comments
+  post"/comments/:id",      to: "comments#create",   as: :comment
 
   get "/categories",        to: "categories#index",  as: :categories
   get "/categories/new",    to: "categories#new",    as: :new_category
@@ -30,6 +37,8 @@ Rails.application.routes.draw do
   patch "/events/:id",      to: "events#update"
 
   get "/calendars/show",    to: "calendars#show",    as: :calendar
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

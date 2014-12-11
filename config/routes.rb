@@ -30,9 +30,9 @@ Rails.application.routes.draw do
   patch "/events/:id",      to: "events#update"
 
   get "/calendars",         to: "calendars#index",  as: :calendars
-  get "/calendars/:id",    to: "calendars#show",    as: :calendar
+  get "/calendars/:id",     to: "calendars#show",    as: :calendar
 
-
+  post "/tools",            to: "tools#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

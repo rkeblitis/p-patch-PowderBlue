@@ -37,3 +37,14 @@
   <%= f.submit "Submit", :class => "btn btn-default" %>
 
 <%end %>
+
+<h3>All Tools</h3>
+
+<h3>Add Tool</h3>
+
+<%= form_for @tool do |f| %>
+  <%= f.label "name" %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :user_id, :value => @current_user.id %>
+  <%= f.submit "Add tool", :class => "btn btn-default" %>
+<% end %>

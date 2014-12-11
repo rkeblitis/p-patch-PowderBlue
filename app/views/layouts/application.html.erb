@@ -10,6 +10,7 @@
   <%= javascript_include_tag 'application' %>
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -55,13 +56,16 @@
       <%= password_field_tag :password %><br><br>
       <%= submit_tag "Sign In", :class => "btn btn-default btn-xs" %>
     <% end %>
-    
+
 
   </div>
 
 <% end %>
 
 <div class="whiteout">
+  <nav class="nav-for-everybody">
+    <%= link_to "about", "/"%>&nbsp;&nbsp;&nbsp;<%= link_to "tools", tools_path %>
+  </nav>
   <%= yield %>
 </div>
 

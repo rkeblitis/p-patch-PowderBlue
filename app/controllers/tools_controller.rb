@@ -1,5 +1,9 @@
 class ToolsController < ApplicationController
 
+  def index
+    @tools = Tool.all
+  end
+
   def create
     @tool = Tool.new(tool_params)
     if @tool.save

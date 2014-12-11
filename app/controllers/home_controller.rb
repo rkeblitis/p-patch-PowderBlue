@@ -9,8 +9,6 @@ class HomeController < ApplicationController
     @current_month = Date.today.strftime("%m").to_i
     @beginning_of_month = Date.civil(@current_year, @current_month, 1)
     @end_of_month = Date.civil(@current_year, @current_month, -1)
-
-    @tools = Tool.all
   end
 
 end

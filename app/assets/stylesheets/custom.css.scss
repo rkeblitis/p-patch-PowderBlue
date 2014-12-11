@@ -30,6 +30,18 @@ body {
   font-family: "helvetica";
   margin-top: 1em;
 }
+
+.nav-for-everybody {
+  font-family: "helvetica";
+  font-size: 2em;
+  background-color: #000000;
+  padding: .2em;
+  text-align: center;
+}
+
+.nav-for-everybody a {
+  color: #d0d0d0;
+}
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .yellow-text, .yellow-text-2 {
@@ -37,7 +49,7 @@ body {
   margin-top: 0;
   text-align: center;
   font-size: 1.7em;
-  color: #fff08c;
+  color: #e5fefc;
   text-shadow: 2px 2px #574f4f;
 }
 

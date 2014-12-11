@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get "/calendars",         to: "calendars#index",  as: :calendars
   get "/calendars/:id",     to: "calendars#show",    as: :calendar
 
+  get "/tools",             to: "tools#index",      as: :tools
   post "/tools",            to: "tools#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

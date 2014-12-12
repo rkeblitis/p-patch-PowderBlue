@@ -1,0 +1,18 @@
+<%= form_for Comment.new , url: comment_form_path(@post.id) do |f| %>
+<%= f.label "Make a Comment" %>
+<%= f.text_area :comment, class:"form-control", placeholder:"Comment" %><br>
+<%= f.hidden_field :post_id, value: params["id"]  %>
+<%= f.submit "Submit", :class => "btn btn-default" %>
+<%end %>
+
+
+<!-- $(function() {
+  $(".signup-signin").hide();
+  $(".yellow-text").click(function() {
+    $(".signup-signin").slideToggle("slow");
+  });
+  $(".signup-signin-2").hide();
+  $(".yellow-text-2").click(function() {
+    $(".signup-signin-2").slideToggle("slow");
+  });
+}); -->

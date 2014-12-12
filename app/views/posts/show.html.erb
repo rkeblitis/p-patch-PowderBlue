@@ -1,0 +1,20 @@
+<div class="post">
+  <h4><%= @post.title %></h4>
+  <p><%= @post.content %></p><br>
+  <%= button_to "Add a Comment", comment_form_path(@post.id), method: :get, class:"btn btn-default" %>
+</div>
+
+<div class="comments">
+  <p>
+    <% @post.comments.each do |comment| %>
+    <%= comment.comment%>
+    <% end %>
+  </p>
+</div>
+
+
+
+<!--  On an individual post a user can make a comment-->
+<!--  the add comment button needs to send a get request to a page that has the comment form-->
+<!--  when the submit button of the form is pressed a post request ( contatining the post_id) to the databse that saves the comment-->
+<!--  that comment will have a comment_id upon creation but also will need a post_id so it can be assoicated with a post-->

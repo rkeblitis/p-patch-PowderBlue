@@ -1,35 +1,44 @@
-Rails.application.routes.draw do
-  get 'calendar/show'
+  Rails.application.routes.draw do
 
-  root "home#index"
+  get     'calendar/show'
+  root    "home#index"
+  get     "auth/:provider/callback",to: "sessions#create_oauth"
+  get     "/users",                 to: "users#index",        as: :users
+  get     "/",                      to: "users#new",          as: :signup
+  post    "/users",                 to: "users#create"
 
-  get "auth/:provider/callback",    to: "sessions#create_oauth"
 
-  get   "/users",           to: "users#index",      as: :users
-  get   "/",                to: "users#new",        as: :signup
-  post  "/users",           to: "users#create"
 
-  get   "/admin",         to: "users#admin",      as: :admin
-  post  "/admin",         to: "posts#create",     as: :posts
-  patch "/admin/:id",     to: "users#make_admin",  as: :make_admin
+  get     "/admin",                 to: "users#admin",        as: :admin
+  post    "/admin",                 to: "posts#create",       as: :posts
+  patch   "/admin/:id",             to: "users#make_admin",   as: :make_admin
 
-  get   "/signin",          to: "sessions#new",     as: :signin
-  post  "/signin",          to: "sessions#create"
-  get   "/my-account",      to: "sessions#show",    as: :my_account
-  delete "/signout",        to: "sessions#destroy", as: :signout
+  get     "/posts",                 to: "posts#index",        as: :all_posts
+  get     "/posts/:id",             to: "posts#show",         as: :post
 
-  get "/categories",        to: "categories#index",  as: :categories
-  get "/categories/new",    to: "categories#new",    as: :new_category
-  post "/categories",       to: "categories#create"
+  get     "/signin",                to: "sessions#new",       as: :signin
+  post    "/signin",                to: "sessions#create"
+  get     "/my-account",            to: "sessions#show",      as: :my_account
+  delete  "/signout",               to: "sessions#destroy",   as: :signout
 
-  get "/events",            to: "events#index",      as: :events
-  get "/events/new",        to: "events#new",        as: :new_event
-  post "/events",           to: "events#create"
-  get "/events/:id",        to: "events#show",       as: :event
-  get "/events/:id/edit",   to: "events#edit",       as: :edit_event
-  patch "/events/:id",      to: "events#update"
+  get     "/comments/:id",          to: "comments#new",       as: :comment_new
+  post    "/comments/:id",          to: "comments#create",    as: :comment_form
+  get     "/comment/:id",           to: "comments#show",      as: :comment
 
-  get "/calendars/show",    to: "calendars#show",    as: :calendar
+  get     "/categories",            to: "categories#index",   as: :categories
+  get     "/categories/new",        to: "categories#new",     as: :new_category
+  post    "/categories",            to: "categories#create"
+
+  get     "/events",                to: "events#index",       as: :events
+  get     "/events/new",            to: "events#new",         as: :new_event
+  post    "/events",                to: "events#create"
+  get     "/events/:id",            to: "events#show",        as: :event
+  get     "/events/:id/edit",       to: "events#edit",        as: :edit_event
+  patch   "/events/:id",            to: "events#update"
+
+  get     "/calendars/show",        to: "calendars#show",     as: :calendar
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

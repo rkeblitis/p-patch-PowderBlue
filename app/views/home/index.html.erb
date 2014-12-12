@@ -8,12 +8,12 @@
   <% if logged_in? %>
     <div class="center">
       <%= link_to "Add Event", new_event_path, class: "btn btn-info" %>
-      <%= link_to "Show All Calendar Events (STILL WORKING ON THIS)", calendars_path, class: "btn btn-info" %>
+      <%= link_to "All Calendar Events", calendars_path, class: "btn btn-info" %>
     </div>
 
   <% else %>
     <div class="center">
-      <%= link_to "Show All Calendar Events (STILL WORKING ON THIS)", calendars_path, class: "btn btn-info" %>
+      <%= link_to "All Calendar Events", calendars_path, class: "btn btn-info" %>
     </div>
   <% end %>
 

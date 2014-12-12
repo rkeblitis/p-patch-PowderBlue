@@ -49,6 +49,37 @@ small {
   font-size: .7em;
 }
 
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*front-page~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.icons-n-links {
+  text-align: center;
+}
+
+.icons-n-links a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+.icons-n-links a:hover {
+  text-decoration: none;
+}
+
+.icons-n-links img {
+  width: 7em;
+}
+
+.front-wrapper {
+  background-color: #14ffc0;
+  padding-bottom: 2em;
+}
+
+.shovel {
+  float: left;
+}
+
+.sow {
+
+}
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .yellow-text, .yellow-text-2 {

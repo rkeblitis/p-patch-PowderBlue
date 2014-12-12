@@ -19,4 +19,16 @@
       <li><%= event.name %> on <%= event.date %> (<%= link_to "Edit", edit_event_path(event) %>)</li>
     <% end %>
   </ul>
+
+  <h2>Tools Checked Out</h2>
+  <ul class="list">
+    <% @tools.each do |tool| %>
+    <li><%= tool.name %>
+      <%= form_for tool do |f| %>
+        <%= f.hidden_field :user_id, value: nil %>
+        <%= f.submit "Return", class: "btn btn-default" %>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
 </div>

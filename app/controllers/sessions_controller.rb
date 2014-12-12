@@ -33,6 +33,7 @@ class SessionsController < ApplicationController
 
   def show
     @events = current_user.events
+    @tools = current_user.tools
   end
 
   def destroy

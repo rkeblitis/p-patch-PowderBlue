@@ -1,8 +1,32 @@
 <div class="front-wrapper">
+
 <div class="notice">
   <%= notice %>
 </div>
+<div class="icons-wrapper">
+  <div class="icons-n-links">
 
+    <div class="shovel">
+      <%= image_tag "shovel.gif" %><br>
+      <%= link_to "tools", tools_path %>
+    </div>
+
+    <div class="sow">
+      <%= image_tag "sow.gif" %><br>
+      <%= link_to "about", "/" %>
+    </div><br>
+
+    <div class="events">
+      <%= image_tag "party.gif" %><br>
+      <%= link_to "events", events_path %>
+    </div>
+
+    <div class="news">
+      <%= image_tag "news.gif" %><br>
+      <%= link_to "news", posts_path %>
+    </div>
+  </div>
+</div>
 
 <div class="wrap-calendar">
 
@@ -53,5 +77,4 @@
 
     </tr>
   </table>
-</div>
 </div>

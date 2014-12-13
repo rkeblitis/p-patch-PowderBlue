@@ -50,8 +50,16 @@ small {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*front-page~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.icons-wrapper {
+  background-color: #ffffff;
+}
+
 .icons-n-links {
   text-align: center;
+  background-color: #ffffff;
+  padding-bottom: 2em;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .icons-n-links a {
@@ -65,7 +73,7 @@ small {
 }
 
 .icons-n-links img {
-  width: 7em;
+  width: 10em;
 }
 
 .front-wrapper {
@@ -78,6 +86,14 @@ small {
 }
 
 .sow {
+
+}
+
+.events {
+  float: left;
+}
+
+.news {
 
 }
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
@@ -158,6 +174,7 @@ small {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*CALENDAR~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
 .wrap-calendar {
   width: 70%;
   padding-top: 2em;

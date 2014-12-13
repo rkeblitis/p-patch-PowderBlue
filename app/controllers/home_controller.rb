@@ -10,6 +10,14 @@ class HomeController < ApplicationController
     @beginning_of_month = Date.civil(@current_year, @current_month, 1)
     @end_of_month = Date.civil(@current_year, @current_month, -1)
 
+    weather
+
+  end
+
+  def weather
+    @api = HTTParty.get("http://api.openweathermap.org/data/2.5/find?q=Seattle&units=imperial")
+    @api.parsed_response
+    raise
 
   end
 

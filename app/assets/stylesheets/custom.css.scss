@@ -4,7 +4,7 @@
 
 html {
     // background: url(image_path("dirt.jpg")) no-repeat center fixed;
-  background: url(image_path("dirt.jpg")) no-repeat center center fixed;
+  background: url(image_path("https://farm9.staticflickr.com/8535/8710875491_a03f76aeec.jpg")) no-repeat center center fixed;
   background-size: 100% 100%;
   min-height: 100%;
 }
@@ -14,7 +14,7 @@ body {
 }
 
 .whiteout {
-  margin-top: 7em;
+  margin-top: 10em;
   background-color: #ffffff;
   padding-bottom: 2em;
   width: 100%;
@@ -31,19 +31,6 @@ body {
   margin-top: 1em;
 }
 
-.nav-for-everybody {
-  font-family: "helvetica";
-  font-size: 2em;
-  background-color: #000000;
-  padding-top: 2em;
-  padding-left: 1em;
-  // text-align: center;
-}
-
-.nav-for-everybody a {
-  color: #d0d0d0;
-}
-
 small {
   color: #df8581;
   font-size: .7em;
@@ -51,20 +38,22 @@ small {
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*front-page~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 .icons-wrapper {
-  background-color: #ffffff;
+  background-color: #ede9e9;
+  padding-top: 2em;
+  padding-bottom: 8em;
 }
 
 .icons-n-links {
   text-align: center;
-  background-color: #ffffff;
-  padding-bottom: 2em;
+  padding-top: 6em;
+  padding-bottom: 7em;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 .icons-n-links a {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #000000;
 }
 
@@ -73,7 +62,7 @@ small {
 }
 
 .icons-n-links img {
-  width: 10em;
+  width: 7em;
 }
 
 .front-wrapper {
@@ -82,15 +71,16 @@ small {
 }
 
 .shovel {
-  float: left;
+
 }
 
 .sow {
 
+
 }
 
 .events {
-  float: left;
+
 }
 
 .news {
@@ -103,8 +93,8 @@ small {
   margin-top: 0;
   text-align: center;
   font-size: 1.5em;
-  color: #e5fefc;
-  text-shadow: 2px 2px #574f4f;
+  color: #54a79c;
+  text-shadow: 1px 1px #d8cece;
 }
 
 .signup-signin, .signup-signin-2 {
@@ -216,7 +206,7 @@ small {
 .calendar-month, .tools {
   text-align: center;
   font-size: 3em;
-  font-family: "Palatino";
+  font-family: "Helvetica";
   color: #7fdcd5;
   text-shadow: 1px 1px #000000;
 }

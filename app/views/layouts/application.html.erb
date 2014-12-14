@@ -63,9 +63,35 @@
 
 <div class="whiteout">
 
-  <nav class="nav-for-everybody">
+  <!-- <nav class="nav-for-everybody">
     <%= link_to "home", root_path %>&nbsp;&nbsp;&nbsp;<%= link_to "about", "/"%>&nbsp;&nbsp;&nbsp;<%= link_to "tools", tools_path %>
-  </nav>
+  </nav> -->
+
+  <div class="icons-wrapper">
+    <div class="icons-n-links">
+
+      <div class="sow col-xs-3">
+        <a href="/about"><%= image_tag "sow.gif" %></a><br>
+        <%= link_to "SOW WHAT?", "/" %>
+      </div>
+
+      <div class="shovel col-xs-3">
+        <%= image_tag "shovel.gif" %><br>
+        <%= link_to "TOOLS", tools_path %>
+      </div>
+
+      <div class="news col-xs-3">
+        <%= image_tag "news.gif" %><br>
+        <%= link_to "NEWS", posts_path %>
+      </div>
+
+      <div class="events col-xs-3">
+        <%= image_tag "party.gif" %><br>
+        <%= link_to "EVENTS", events_path %>
+      </div>
+
+    </div>
+  </div>
 
   <%= yield %>
 </div>

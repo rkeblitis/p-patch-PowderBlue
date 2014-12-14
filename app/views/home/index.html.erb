@@ -36,12 +36,13 @@
   </table>
 </div>
 
-
-<h2><%= @api["list"][0]["name"] %><br></h2>
-<h4><%= @api.headers["date"]%></h4>
-<h4>
-<%= @api["list"][0]["main"]["temp"].round %>°F<br>
-<%= @description %><br>
-Humidity: <%= @api["list"][0]["main"]["humidity"] %>%<br>
-Wind: <%= @api["list"][0]["wind"]["speed"].round %> mph<br>
-</h4>
+<div class="weather"
+  <h2><%= @api["list"][0]["name"] %><br></h2>
+  <h4><%= @api.headers["date"]%></h4>
+  <h4>
+  <%= @api["list"][0]["main"]["temp"].round %>°F<br>
+  <%= @description %><br>
+  Humidity: <%= @api["list"][0]["main"]["humidity"] %>%<br>
+  Wind: <%= @api["list"][0]["wind"]["speed"].round %> mph<br>
+  </h4>
+</div>

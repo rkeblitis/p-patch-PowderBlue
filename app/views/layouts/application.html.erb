@@ -67,6 +67,9 @@
     <%= link_to "home", root_path %>&nbsp;&nbsp;&nbsp;<%= link_to "about", "/"%>&nbsp;&nbsp;&nbsp;<%= link_to "tools", tools_path %>
   </nav> -->
 
+  <h1 class="root"><%= link_to "CAN YOU DIG IT?", root_path %></h1>
+
+
   <div class="icons-wrapper">
     <div class="icons-n-links">
 
@@ -87,11 +90,14 @@
 
       <div class="events col-xs-3">
         <%= image_tag "party.gif" %><br>
-        <%= link_to "EVENTS", events_path %>
+        <%= link_to "EVENTS", calendars_path %>
       </div>
 
     </div>
   </div>
+
+
+
 
   <%= yield %>
 </div>

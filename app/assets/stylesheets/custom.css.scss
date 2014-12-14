@@ -16,7 +16,7 @@ body {
 .whiteout {
   margin-top: 10em;
   background-color: #ffffff;
-  padding-bottom: 2em;
+  padding-bottom: 0em;
   width: 100%;
 }
 
@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 
-.notice {
+notice {
   color: #d76662;
   font-size: 1.4em;
   font-family: "helvetica";
@@ -37,6 +37,22 @@ small {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*front-page~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.root {
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+.root a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  color: #88a8c2;
+  text-shadow: 1px 1px #d8cece;
+}
+
+.root a:hover {
+  text-decoration: none;
+}
+
 .icons-wrapper {
   background-color: #ede9e9;
   padding-top: 2em;
@@ -70,22 +86,6 @@ small {
   padding-bottom: 2em;
 }
 
-.shovel {
-
-}
-
-.sow {
-
-
-}
-
-.events {
-
-}
-
-.news {
-
-}
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .yellow-text, .yellow-text-2 {

@@ -1,9 +1,15 @@
 <div class="wrap-calendar">
+  <% if logged_in? %>
+    <div class="center">
+      <%= link_to "Add Event", new_event_path, class: "btn btn-info" %>
+    </div>
+  <% end %>
+
 
   <% find_months_to_generate %>
   <% @dates_of_each_month.each do |month| %>
     <% generate_each_month(month) %>
-    
+
     <h2 class="calendar-month"><%= @first_of_month.strftime("%B %Y") %></h2>
 
     <table id="calendar">

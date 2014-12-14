@@ -4,7 +4,7 @@
 
 html {
     // background: url(image_path("dirt.jpg")) no-repeat center fixed;
-  background: url(image_path("dirt.jpg")) no-repeat center center fixed;
+  background: url(image_path("https://farm9.staticflickr.com/8535/8710875491_a03f76aeec.jpg")) no-repeat center center fixed;
   background-size: 100% 100%;
   min-height: 100%;
 }
@@ -14,10 +14,76 @@ body {
 }
 
 .whiteout {
-  margin-top: 7em;
+  margin-top: 10em;
   background-color: #ffffff;
-  padding-bottom: 2em;
+  padding-bottom: 0em;
   width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+notice {
+  color: #d76662;
+  font-size: 1.4em;
+  font-family: "helvetica";
+  margin-top: 1em;
+}
+
+small {
+  color: #df8581;
+  font-size: .7em;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*front-page~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.root {
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 3em;
+}
+.root a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2em;
+  color: #88a8c2;
+  text-shadow: 1px 1px #d8cece;
+}
+
+.root a:hover {
+  text-decoration: none;
+}
+
+.icons-wrapper {
+  background-color: #ede9e9;
+  padding-top: 2em;
+  padding-bottom: 8em;
+}
+
+.icons-n-links {
+  text-align: center;
+  padding-top: 6em;
+  padding-bottom: 7em;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.icons-n-links a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: #000000;
+}
+
+.icons-n-links a:hover {
+  text-decoration: none;
+}
+
+.icons-n-links img {
+  width: 7em;
+}
+
+.front-wrapper {
+  background-color: #14ffc0;
+  padding-bottom: 2em;
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SIGN UP & SIGN-IN~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
@@ -26,9 +92,9 @@ body {
   font-family: "helvetica";
   margin-top: 0;
   text-align: center;
-  font-size: 1.7em;
-  color: #fff08c;
-  text-shadow: 2px 2px #574f4f;
+  font-size: 1.5em;
+  color: #54a79c;
+  text-shadow: 1px 1px #d8cece;
 }
 
 .signup-signin, .signup-signin-2 {
@@ -38,6 +104,7 @@ body {
   margin: 0;
   border-radius: 1em;
   border-color: #bec0ba;
+  font-size: .9em;
 }
 
 .signup-signin input, .signup-signin-2 input {
@@ -97,8 +164,11 @@ body {
 }
 
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*CALENDAR~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
 .wrap-calendar {
   width: 70%;
+  padding-top: 2em;
+  margin-left: 13%;
 }
 
 #calendar {
@@ -128,11 +198,25 @@ body {
   text-align: center;
 }
 
-.calendar-month {
-  padding-top: 2em;
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*EVENTS*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.rsvp {
+  float: right;
+}
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*SHARED~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+.calendar-month, .tools {
   text-align: center;
   font-size: 3em;
-  font-family: "Palatino";
+  font-family: "Helvetica";
   color: #7fdcd5;
   text-shadow: 1px 1px #000000;
+}
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*TOOLS~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+
+.tools-list {
+  text-align: center;
+}
+
+.tools-list li {
+  font-size: 1.5em;
 }

@@ -20,11 +20,13 @@ class UsersController < ApplicationController
 
   def admin
     current_user
-      if @current_user.admin == true
-        @users = User.all
-      else
+    @tool = Tool.new
+    @tools = Tool.all
+    if @current_user.admin == true
+      @users = User.all
+    else
       redirect_to root_path
-      end
+    end
   end
 
   def make_admin

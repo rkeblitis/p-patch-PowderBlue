@@ -1,0 +1,50 @@
+<div class="wrap-calendar">
+  <% if logged_in? %>
+    <div class="center">
+      <%= link_to "Add Event", new_event_path, class: "btn btn-info" %>
+    </div>
+  <% end %>
+
+
+  <% find_months_to_generate %>
+  <% @dates_of_each_month.each do |month| %>
+    <% generate_each_month(month) %>
+
+    <h2 class="calendar-month"><%= @first_of_month.strftime("%B %Y") %></h2>
+
+    <table id="calendar">
+      <tr>
+        <th class="day">Sunday</th>
+        <th class="day">Monday</th>
+        <th class="day">Tuesday</th>
+        <th class="day">Wednesday</th>
+        <th class="day">Thursday</th>
+        <th class="day">Friday</th>
+        <th class="day">Saturday</th>
+      </tr>
+
+    <tr>
+
+      <% find_events %>
+
+      <% (@first_of_month..@last_of_month).each do |d| %>
+        <% if d == @first_of_month %>
+          <% d.wday.times do %> <td class="offset"></td>
+        <% end %>
+      <% end %>
+
+        <% if d.wday == 0 %>
+    </tr>
+
+    <tr>
+        <% end %>
+        <td class="date-number"><%= d.day %><br>
+          <% get_events_of_the_day(get_date(d.day)) %>
+          <% @events_of_the_day.each do |event| %>
+            <%= link_to event.name, event_path(event) %>
+        <% end %></td>
+        <% end %>
+
+      </tr>
+    </table>
+  <% end %>

@@ -22,11 +22,6 @@ class HomeController < ApplicationController
     rest_of_word = api_description[1..-1]
     cap_word = rest_of_word.gsub(/\s[a-z]/, &:upcase)
     @description = first_letter + cap_word
-
-
-
-
-
   end
 
 end

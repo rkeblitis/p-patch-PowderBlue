@@ -1,12 +1,9 @@
   Rails.application.routes.draw do
-
-  get     'calendar/show'
   root    "home#index"
   get     "auth/:provider/callback",to: "sessions#create_oauth"
   get     "/users",                 to: "users#index",        as: :users
   get     "/",                      to: "users#new",          as: :signup
   post    "/users",                 to: "users#create"
-
 
 
   get     "/admin",                 to: "users#admin",        as: :admin
@@ -36,10 +33,15 @@
   get     "/events/:id/edit",       to: "events#edit",        as: :edit_event
   patch   "/events/:id",            to: "events#update"
 
-  get     "/calendars/show",        to: "calendars#show",     as: :calendar
+  get "/calendars",         to: "calendars#index",  as: :calendars
+  get "/calendars/:id",     to: "calendars#show",   as: :calendar
 
+  get "/tools",             to: "tools#index",      as: :tools
+  post "/tools",            to: "tools#create"
+  get "/tools/:id",         to: "tools#show",       as: :tool
+  patch "/tools/:id",       to: "tools#update",     as: :edit_tool
 
-
+  get "/about",             to: "about#index",      as: :about
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

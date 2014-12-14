@@ -10,6 +10,7 @@
   <%= javascript_include_tag 'application' %>
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,7 +18,6 @@
 <% if logged_in? %>
 
   <div class="top-bar">
-    <%= link_to "Home", root_path %> /
     <%= link_to "My account", my_account_path(@current_user) %> /
     <%= link_to "Sign Out", signout_path(@current_user), method: :delete %>
   </div>
@@ -56,11 +56,49 @@
       <%= submit_tag "Sign In", :class => "btn btn-default btn-xs" %>
     <% end %>
 
+
   </div>
 
 <% end %>
 
 <div class="whiteout">
+
+  <!-- <nav class="nav-for-everybody">
+    <%= link_to "home", root_path %>&nbsp;&nbsp;&nbsp;<%= link_to "about", "/"%>&nbsp;&nbsp;&nbsp;<%= link_to "tools", tools_path %>
+  </nav> -->
+
+  <h1 class="root"><%= link_to "CAN YOU DIG IT?", root_path %></h1>
+
+
+  <div class="icons-wrapper">
+    <div class="icons-n-links">
+
+      <div class="sow col-xs-3">
+        <a href="/about"><%= image_tag "sow.gif" %></a><br>
+        <%= link_to "SOW WHAT?", "/" %>
+      </div>
+
+      <div class="shovel col-xs-3">
+        <a href="/tools"><%= image_tag "shovel.gif" %></a><br>
+        <%= link_to "TOOLS", tools_path %>
+      </div>
+
+      <div class="news col-xs-3">
+        <%= image_tag "news.gif" %><br>
+        <%= link_to "NEWS", posts_path %>
+      </div>
+
+      <div class="events col-xs-3">
+        <a href="/calendars"><%= image_tag "party.gif" %></a><br>
+        <%= link_to "EVENTS", calendars_path %>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
   <%= yield %>
 </div>
 

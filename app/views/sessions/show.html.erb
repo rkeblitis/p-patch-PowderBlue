@@ -1,6 +1,9 @@
+<div class="notice">
+  <%= notice %>
+</div>
+
 <div id="my-account">
   <h2>Your Account</h2>
-  <%= notice %>
 
   <ul class="list">
     <li>Name: <%= current_user.username %></li>
@@ -14,6 +17,18 @@
   <ul class="list">
     <% @events.each do |event| %>
       <li><%= event.name %> on <%= event.date %> (<%= link_to "Edit", edit_event_path(event) %>)</li>
+    <% end %>
+  </ul>
+
+  <h2>Tools Checked Out</h2>
+  <ul class="list">
+    <% @tools.each do |tool| %>
+    <li><%= tool.name %>
+      <%= form_for tool do |f| %>
+        <%= f.hidden_field :user_id, value: nil %>
+        <%= f.submit "Return", class: "btn btn-default" %>
+      <% end %>
+    </li>
     <% end %>
   </ul>
 </div>

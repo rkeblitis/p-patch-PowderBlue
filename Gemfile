@@ -22,7 +22,7 @@ gem 'bootstrap_form'
 
 gem "omniauth-twitter"
 
-gem 'dotenv-rails'
+gem 'dotenv-rails', group: :production
 # gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'rails', '4.1.5'

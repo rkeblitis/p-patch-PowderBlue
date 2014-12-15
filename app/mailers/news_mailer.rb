@@ -1,7 +1,11 @@
 class NewsMailer < ActionMailer::Base
   default from: "rkeblitis@gmail.com"
+  # def join_us
+  #   @news = Post.first
+  #   mail(to: "bookis.smuin+club@gmail.com", subject: "Come join #{@news.title} for a dance party!")
+  # end
 
-  def mail
+  def news_update
     @news = Post.last
     #User.all.each do |user|
       mail(to: "rkeblitis@gmail.com",
@@ -10,7 +14,7 @@ class NewsMailer < ActionMailer::Base
           )
     #end
   end
-
+  #
 
 
 end

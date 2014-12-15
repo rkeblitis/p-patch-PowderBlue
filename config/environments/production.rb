@@ -13,7 +13,7 @@ Rails.application.configure do
     password: ENV["MANDRILL_APIKEY"],
     # password: ENV["MANDRILL_PASSWORD"],
     authentication: 'plain',
-    # enable_starttls_auto: true
+    enable_starttls_auto: true
   }
   ActionMailer::Base.delivery_method = :smtp
 

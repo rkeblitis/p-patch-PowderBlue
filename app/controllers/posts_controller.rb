@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @post = Post.create(params.require(:post).permit(:title, :content))
     if @post.save
       NewsMailer.news_update(@post.id).deliver
-      redirect_to my_account_path
+      redirect_to admin_path
     else
       redirect_to admin_path
     end

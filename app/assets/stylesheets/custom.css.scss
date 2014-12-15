@@ -29,6 +29,7 @@ notice {
   font-size: 1.4em;
   font-family: "helvetica";
   margin-top: 1em;
+  margin-left: 1em;
 }
 
 small {
@@ -39,14 +40,21 @@ small {
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*front-page~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 .root {
   text-align: center;
-  padding-top: 4em;
-  padding-bottom: 3em;
+  padding-top: 2em;
 }
 .root a {
   font-family: "Open Sans", sans-serif;
   font-size: 2em;
   color: #88a8c2;
   text-shadow: 1px 1px #d8cece;
+}
+
+.hoe {
+  font-size: 2em;
+  font-style: italic;
+  text-align: center;
+  color: #a5a5a5;
+  padding-bottom: 2em;
 }
 
 .root a:hover {

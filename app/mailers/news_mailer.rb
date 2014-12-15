@@ -5,14 +5,16 @@ class NewsMailer < ActionMailer::Base
   #   mail(to: "bookis.smuin+club@gmail.com", subject: "Come join #{@news.title} for a dance party!")
   # end
 
-  def news_update
-    @news = Post.last
-    #User.all.each do |user|
-      mail(to: "rkeblitis@gmail.com",
+
+  def news_update(post_id)
+    @news = Post.find(post_id)
+    User.all.each do |user|
+      mail(to: user.email,
           subject: "Moar News for ",
           body: "#{@news.title}\n read more: \n http://localhost:3000/posts/#{@news.id}"
           )
-    #end
+    end
+    Resque.enqueue(EmailJob, @news)
   end
   #
 

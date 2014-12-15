@@ -32,6 +32,8 @@ gem 'bootstrap-sass', '3.2.0.2'
 
 gem "resque"
 
+gem "redis"
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets

@@ -1,6 +1,6 @@
-  require 'resque/server'
+  #require 'resque/server'
   Rails.application.routes.draw do
-    mount Resque::Server, :at => "/resque"
+  #  mount Resque::Server, :at => "/resque"
 
   root    "home#index"
   get     "auth/:provider/callback",to: "sessions#create_oauth"

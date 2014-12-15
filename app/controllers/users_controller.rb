@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def make_admin
     if user = User.find(params[:id])
       user.update(admin: true)
-      redirect_to admin_path
+      redirect_to my_account_path
     end
   end
 

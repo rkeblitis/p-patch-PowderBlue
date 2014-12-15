@@ -7,7 +7,7 @@ class ToolsController < ApplicationController
   def create
     @tool = Tool.new(tool_params)
     if @tool.save
-      redirect_to admin_path
+      redirect_to my_account_path
     end
   end
 

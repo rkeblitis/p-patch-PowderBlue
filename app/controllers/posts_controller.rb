@@ -3,8 +3,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(params.require(:post).permit(:title, :content))
     if @post.save
-      redirect_to admin_path
       NewsMailer.news_update(@post.id).deliver
+      redirect_to admin_path
+
     else
       render :admin_path
     end

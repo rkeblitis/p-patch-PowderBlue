@@ -32,8 +32,6 @@ gem 'bootstrap-sass', '3.2.0.2'
 
 gem "resque"
 
-gem "heroku_resque_autoscaler"
-
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets

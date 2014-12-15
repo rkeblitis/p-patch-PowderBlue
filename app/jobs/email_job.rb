@@ -1,7 +1,5 @@
 class EmailJob
-  extend HerokuResqueAutoscaler
-  
-  @queue = :email
+    @queue = :email
 
   def self.perform
     NewsMailer.news_update(post_id).deliver

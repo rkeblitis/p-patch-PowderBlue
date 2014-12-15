@@ -42,11 +42,16 @@ small {
   text-align: center;
   padding-top: 2em;
 }
+
 .root a {
   font-family: "Open Sans", sans-serif;
   font-size: 2em;
   color: #88a8c2;
   text-shadow: 1px 1px #d8cece;
+}
+
+.root a:hover {
+  text-decoration: none;
 }
 
 .hoe {

@@ -176,6 +176,22 @@ small {
   list-style-type: none;
 }
 
+
+// ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*WEATHER~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
+
+.wrap-weather {
+  width: 100%;
+  background-color: #908BF2;
+  padding-top: 2em;
+  padding-bottom: 8em;
+  text-align: center;
+}
+
+.daily-weather {
+  display: inline-block;
+  text-align: center;
+}
+
 // ~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*CALENDAR~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
 
 .wrap-calendar {

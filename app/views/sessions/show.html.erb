@@ -31,4 +31,56 @@
     </li>
     <% end %>
   </ul>
+
+  <% if current_user.admin == true %>
+
+    <h2>All Tools</h2>
+      <% @tools.each do |tool| %>
+        <%= tool.name %>
+      <% end %>
+
+    <h2>Add Tool</h2>
+    <%= form_for @tool do |f| %>
+      <%= f.label "name" %>
+      <%= f.text_field :name %>
+      <%= f.hidden_field :user_id, :value => @current_user.id %>
+      <%= f.submit "Add tool", :class => "btn btn-default" %>
+    <% end %>
+
+    <table class="table table-hover">
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Make Admin</th>
+      </tr>
+
+      <h2>Add Admins</h2>
+      <%@users.each do |user| %>
+        <tr>
+          <% if user != @current_user  %>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+          <% elsif user.admin == nil %>
+            <td><%= button_to "Make Admin", make_admin_path(user.id), method: :patch, class:"btn btn-default" %></td>
+          <% else %>
+            <td><%= user.admin %>
+          <%end %>
+      <%end %>
+        </tr>
+
+    </table>
+
+
+    <div class="NewsForm">
+      <h2>Make a New Post</h2>
+
+      <%= form_for Post.new do |f|  %>
+        <%= f.label "title" %>
+        <%= f.text_field :title, class:"form-control", placeholder:"Title" %><br>
+        <%= f.label "content" %>
+        <%= f.text_area :content, class:"form-control", placeholder:"Content" %><br>
+      <%= f.submit "Submit", :class => "btn btn-default" %>
+      <%end %>
+
+    </div>
 </div>

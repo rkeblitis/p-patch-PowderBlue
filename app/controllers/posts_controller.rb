@@ -6,7 +6,7 @@ class PostsController < ApplicationController
       NewsMailer.news_update(@post.id).deliver
       redirect_to my_account_path
     else
-      render :admin_path
+      redirect_to admin_path
     end
   end
 

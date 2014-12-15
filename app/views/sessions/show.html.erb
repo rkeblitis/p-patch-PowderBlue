@@ -10,8 +10,6 @@
     <li>Email: <%= current_user.email %></li>
   </ul>
 
-  <%= link_to "Add Event Category", new_category_path %><br>
-  <%= link_to "Add New Event", new_event_path %>
 
   <h2>Your Event Listings</h2>
   <ul class="list">
@@ -19,7 +17,9 @@
       <li><%= event.name %> on <%= event.date %> (<%= link_to "Edit", edit_event_path(event) %>)</li>
     <% end %>
   </ul>
-
+  <%= link_to "Add Event Category", new_category_path %><br>
+  <%= link_to "Add New Event", new_event_path %>
+  
   <h2>Tools Checked Out</h2>
   <ul class="list">
     <% @tools.each do |tool| %>
@@ -35,8 +35,8 @@
   <% if current_user.admin == true %>
 
     <h2>All Tools</h2>
-      <% @tools.each do |tool| %>
-        <%= tool.name %>
+      <% @all_tools.each do |tool| %>
+        <%= tool.name %><br>
       <% end %>
 
     <h2>Add Tool</h2>

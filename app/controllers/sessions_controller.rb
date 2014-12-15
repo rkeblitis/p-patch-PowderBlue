@@ -34,6 +34,13 @@ class SessionsController < ApplicationController
   def show
     @events = current_user.events
     @tools = current_user.tools
+    @tool = Tool.new
+    @all_tools = Tool.all
+    if @current_user.admin == true
+      @users = User.all
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy

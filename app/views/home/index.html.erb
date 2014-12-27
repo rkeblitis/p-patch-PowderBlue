@@ -1,4 +1,4 @@
-<% require "date" %>
+
 <div class="front-wrapper">
   <%= notice %>
 
@@ -62,7 +62,7 @@
     <h4><%= @api.headers["date"]%></h4>
     <h4>
     <%= @api["list"][0]["main"]["temp"].round %>°F<br>
-    <%= @description %><br>
+    <%= cap(@description) %><br>
     <%= image_tag "pinkrain.jpg" %><br>
     Humidity: <%= @api["list"][0]["main"]["humidity"] %>%<br>
     Wind: <%= @api["list"][0]["wind"]["speed"].round %> mph<br>
@@ -72,12 +72,11 @@
 
 <div class="forecast">
   <h1><%= @forecast %></h1>
-  <h1><%= @morn_temp %></h1>
-  <h1><%= @day_temp %></h1>
-  <h1><%= @night_temp %></h1>
-  <h1><%= @press %></h1>
-  <h1><%= @hum %></h1>
-  <h1><%= @des %></h1>
+  <!-- <h1><%= kelvin_to_fahrenheit(@morn_temp).round %>°F</h1> -->
+  <h1><%= kelvin_to_fahrenheit(@day_temp).round %>°F</h1>
+  <!-- <h1><%= kelvin_to_fahrenheit(@night_temp).round %>°F</h1> -->
+  <h1><%= @hum %>% Humidity</h1>
+  <h1><%= cap(@des) %></h1>
 
 
 

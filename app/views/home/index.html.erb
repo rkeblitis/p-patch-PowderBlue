@@ -1,3 +1,4 @@
+<% require "date" %>
 <div class="front-wrapper">
   <%= notice %>
 
@@ -67,4 +68,17 @@
     Wind: <%= @api["list"][0]["wind"]["speed"].round %> mph<br>
     </h4>
   </div>
+</div>
+
+<div class="forecast">
+  <h1><%= @forecast %></h1>
+  <h1><%= @morn_temp %></h1>
+  <h1><%= @day_temp %></h1>
+  <h1><%= @night_temp %></h1>
+  <h1><%= @press %></h1>
+  <h1><%= @hum %></h1>
+  <h1><%= @des %></h1>
+
+
+
 </div>

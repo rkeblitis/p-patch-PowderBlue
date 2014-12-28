@@ -17,22 +17,22 @@
       <% if user != @current_user  %>
         <td><%= user.username %></td>
         <td><%= user.email %></td>
-        <% if user.admin == nil %>
+      <% elsif user.admin == nil %>
         <td><%= button_to "Make Admin", make_admin_path(user.id), method: :patch, class:"btn btn-default" %></td>
-        <% else %>
-          <td><%= user.admin %>
-          <%end %>
+      <% else %>
+        <td><%= user.admin %>
       <%end %>
+  <%end %>
   </tr>
 
-  <%end %>
+
 
 </table>
 
 
 <div class="NewsForm">
   <h4>Make a New Post</h4>
-  
+
 <%= form_for Post.new do |f|  %>
   <%= f.label "title" %>
   <%= f.text_field :title, class:"form-control", placeholder:"Title" %><br>

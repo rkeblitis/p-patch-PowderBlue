@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
       @user = User.find(@oauth.user_id)
       redirect_to my_account_path, notice: "You're signed in, #{@user.username}. Yay!"
     else
-      @user = User.create(username: auth_hash["info"]["nickname"], password_digest: "nil", email: "nil")
+      @user = User.create(username: auth_hash["info"]["nickname"], password_digest: "nil", email: nil)
       @oauth = Oauth.create(user_id: @user.id, uid: auth_hash["uid"], provider: auth_hash["provider"], token: auth_hash["credentials"]["token"])
       session[:user_id] = @oauth.user_id
       redirect_to my_account_path, notice: "You're signed in, #{@user.username}. Yay!"
@@ -34,6 +34,13 @@ class SessionsController < ApplicationController
   def show
     @events = current_user.events
     @tools = current_user.tools
+    @tool = Tool.new
+    @all_tools = Tool.all
+    if @current_user.admin == true
+      @users = User.all
+    else
+      redirect_to root_path
+    end
   end
 
   def destroy

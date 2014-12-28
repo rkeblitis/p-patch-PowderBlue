@@ -71,13 +71,12 @@
 </div>
 
 <div class="forecast">
-  <h1><%= @forecast %></h1>
-  <!-- <h1><%= kelvin_to_fahrenheit(@morn_temp).round %>°F</h1> -->
-  <h1><%= kelvin_to_fahrenheit(@day_temp).round %>°F</h1>
-  <!-- <h1><%= kelvin_to_fahrenheit(@night_temp).round %>°F</h1> -->
-  <h1><%= @hum %>% Humidity</h1>
-  <h1><%= cap(@des) %></h1>
-
-
+  <% @forecast.each do |day| %>
+    <h2><% d = day["dt"]%></h2>
+    <h2><%= Time.at(d)  %></h2>
+    <h2><%= kelvin_to_fahrenheit(day["temp"]["day"])%>°F</h2>
+    <h2><%= day["humidity"]%> %</h2>
+    <h2><%= cap(day["weather"][0]["description"]) %></h2>
+  <% end %>
 
 </div>

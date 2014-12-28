@@ -9,6 +9,6 @@ module HomeHelper
     first_letter = weather_description[0].upcase
     rest_of_word = weather_description[1..-1]
     cap_word = rest_of_word.gsub(/\s[a-z]/, &:upcase)
-    description = first_letter + cap_word
+    weather_description = first_letter + cap_word
   end
 end

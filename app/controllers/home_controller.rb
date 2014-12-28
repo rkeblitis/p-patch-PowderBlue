@@ -19,21 +19,11 @@ class HomeController < ApplicationController
     @api = HTTParty.get("http://api.openweathermap.org/data/2.5/find?q=Seattle&units=imperial")
     @api.parsed_response
     @description = @api["list"][0]["weather"][0]["description"]
-    forecast
-    # forecast = HTTParty.get("http://api.openweathermap.org/data/2.5/forecast/daily?id=5809844").parsed_response
+    forecast_day
   end
 
-  def forecast
+  def forecast_day
     forecast = HTTParty.get("http://api.openweathermap.org/data/2.5/forecast/daily?id=5809844").parsed_response
-    d = forecast["list"][0]["dt"]
-     @forecast = Time.at(d)
-    @day_temp = forecast["list"][0]["temp"]["day"]
-    @night_temp = forecast["list"][0]["temp"]["night"]
-    @morn_temp = forecast["list"][0]["temp"]["morn"]
-    @press = forecast["list"][0]["pressure"]
-    @hum = forecast["list"][0]["humidity"]
-    @des = forecast["list"][0]["weather"][0]["description"]
+    @forecast = forecast["list"]
   end
-
-
 end

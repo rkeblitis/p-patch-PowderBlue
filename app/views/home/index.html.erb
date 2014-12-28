@@ -1,6 +1,6 @@
 
 <div class="front-wrapper">
-  
+
 
 
 <div class="wrap-calendar">
@@ -74,7 +74,7 @@
   <% @forecast.each do |day| %>
     <h2><% d = day["dt"]%></h2>
     <h2><%= Time.at(d)  %></h2>
-    <h2><%= kelvin_to_fahrenheit(day["temp"]["day"])%>°F</h2>
+    <h2><%= kelvin_to_fahrenheit(day["temp"]["day"]).round%>°F</h2>
     <h2><%= day["humidity"]%> %</h2>
     <h2><%= cap(day["weather"][0]["description"]) %></h2>
   <% end %>
